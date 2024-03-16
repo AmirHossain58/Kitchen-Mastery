@@ -1,9 +1,13 @@
 import Tr from "../Tr/Tr";
 import PTr from "../PTr/PTr";
+// import { totalTime } from "../Recipes/Recipes";
 
 
 const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
-    
+    console.log(addPreparing);
+    const totalTime=addPreparing.reduce((p,c)=>p+parseInt(c.preparing_time),0)
+    const totalCalories=addPreparing.reduce((p,c)=>p+parseInt(c.calories),0)
+    console.log(totalTime);
     return (
         <div className="border-2 ml-6 rounded-xl">
             <div>
@@ -66,6 +70,10 @@ const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
                     {/* </tr> */}
                     </tbody>
                 </table>
+                </div>
+                <div className="flex justify-end gap-3 text-lg font-semibold my-4 mr-4 text-[#282828CC]">
+                    <p>Total Time =<br /> <span>{totalTime} minutes</span></p>
+                    <p>Total Calories =<br /> <span> {totalCalories} calories</span></p>
                 </div>
             </div>
         </div>
