@@ -1,9 +1,9 @@
 import { CiStopwatch } from "react-icons/ci";
 import { AiOutlineFire } from "react-icons/ai";
 
-const   Recipe = ({recipe}) => {
+const   Recipe = ({recipe,handleCook,handlePreparing}) => {
     const{ calories,recipe_image,recipe_name, short_description,preparing_time,ingredients }=recipe
-    console.log(recipe);
+    // console.log(recipe);
     const ingredientSlice=ingredients.slice(0,5)
     return (
         <div>
@@ -26,7 +26,7 @@ const   Recipe = ({recipe}) => {
                     <p className="flex items-center gap-2"><AiOutlineFire /> {calories} calories</p>
                 </div>
                 <div className="card-actions ">
-                <button className="btn bg-[#0BE58A] text-xl font-bold rounded-full border-0">Want to Cook</button>
+                <button onClick={()=>handleCook(recipe)} className="btn bg-[#0BE58A] text-xl font-bold rounded-full border-0">Want to Cook</button>
                 </div>
             </div>
             </div>

@@ -1,37 +1,72 @@
+import Tr from "../Tr/Tr";
+import PTr from "../PTr/PTr";
 
 
-const SideBar = () => {
+const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
+    
     return (
         <div className="border-2 ml-6 rounded-xl">
             <div>
-                <h1 className="text-2xl font-semibold text-center">Want to cook: 01</h1>
-                <div className="px-10"><hr /></div>
-                <table  className="table-auto">
-                   <thead>
-                   <tr >
+                <h1 className="text-2xl mt-6 mb-4 font-semibold text-center">Want to cook: {addRecipes.length}</h1>
+                <div className="px-10 mb-6"><hr /></div>
+                <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead>
+                    <tr>
+                        <th></th>
                         <th>Name</th>
                         <th>Time</th>
                         <th>Calories</th>
+                        <th></th>
                     </tr>
-                   </thead>
-                   <tbody>
-
-                   </tbody>
-                    
+                    </thead>
+                    <tbody>
+                    {/* row 1 */}
+                    {
+                        addRecipes.map((recip,idx)=><Tr 
+                        key={recip.recipe_id} 
+                        recip={recip}
+                        idx={idx}
+                        handlePreparing={handlePreparing}
+                        ></Tr>)
+                    }
+                    </tbody>
                 </table>
+                </div>
             </div>
             <div>
-                <h1  className="text-2xl font-semibold text-center">Currently cooking: 02</h1>
-                <hr />
-                <table className="table-fixed">
-                <thead>
-                   <tr >
+                <h1  className="text-2xl mt-6 mb-4 font-semibold text-center">Currently cooking: {addPreparing.length}</h1>
+                <div className="px-10 mb-6"><hr /></div>
+                <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead>
+                    <tr>
+                        <th></th>
                         <th>Name</th>
                         <th>Time</th>
                         <th>Calories</th>
+                    
                     </tr>
-                   </thead>
+                    </thead>
+                    <tbody>
+
+                        {
+                           addPreparing.map((i,idx)=><PTr key={idx} i={i} idx={idx}></PTr>) 
+                        }
+                    {/* row 1 */}
+                    {/* <tr className="bg-[#28282808]"> */}
+                        {/* <th>1</th>
+                        <td>Cy Ganderton</td>
+                        <td>Quality Control Specialist</td>
+                        <td>Blue</td> */}
+                    
+                        {/* <td><button onClick={()=>handleCook()} className="btn bg-[#0BE58A] text-lg font-semibold rounded-full border-0" >Preparing</button></td> */}
+                    {/* </tr> */}
+                    </tbody>
                 </table>
+                </div>
             </div>
         </div>
     );

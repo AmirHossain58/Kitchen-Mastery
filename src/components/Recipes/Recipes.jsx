@@ -5,13 +5,29 @@ import SideBar from "../SideBar/SideBar";
 
 const Recipes = () => {
     const [recipes,setRecipes]=useState([]);
+    const [addRecipes,setAddRecipes]=useState([]);
+    const [addPreparing,setAddPreparing]=useState([]);
     useEffect(()=>{
         fetch('./recipe.json')
         .then(res=>res.json())
         .then(data=>setRecipes(data))
        
     },[]);
-    console.log(recipes);
+  const handleCook=(recipe)=>{
+    console.log(recipe);
+    const isExists=addRecipes.find(item=>item.recipe_id
+        ===recipe.recipe_id
+        )
+    if(!isExists){
+        setAddRecipes([...addRecipes,recipe])
+    }else{
+        alert('alllllll')
+    }
+   
+  }
+  const handlePreparing=(r)=>{
+    setAddPreparing([...addPreparing,r])
+        }
     return (
         <div>
            <div className="text-center mt-24 mb-12">
@@ -21,14 +37,23 @@ const Recipes = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12">
                 <div className="col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {
-                        recipes.map(recipe=><Recipe key={recipe.id} recipe={recipe}></Recipe>
+                        recipes.map(recipe=><Recipe 
+                            key={recipe.id} 
+                            recipe={recipe}
+                            handleCook={handleCook}
+                            
+                            ></Recipe>
                         )
                     }
                 {/* <Recipe recipes={recipes}></Recipe>
                 <Recipe></Recipe> */}
                 </div>
                 <div className="col-span-5">
-                 <SideBar></SideBar>
+                 <SideBar 
+                 addRecipes={addRecipes}
+                 addPreparing={addPreparing}
+                 handlePreparing={handlePreparing}
+                 ></SideBar>
                 </div>
             </div>
         </div>
