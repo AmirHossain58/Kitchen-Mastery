@@ -4,6 +4,7 @@ import { AiOutlineFire } from "react-icons/ai";
 const   Recipe = ({recipe}) => {
     const{ calories,recipe_image,recipe_name, short_description,preparing_time,ingredients }=recipe
     console.log(recipe);
+    const ingredientSlice=ingredients.slice(0,5)
     return (
         <div>
             <div className="card border-2 p-6 bg-base-100 shadow-xl">
@@ -15,7 +16,8 @@ const   Recipe = ({recipe}) => {
                 <h4 className="text-lg font-medium">Ingredients:{ingredients.length}</h4>
                 <ul className="list-disc text-[#878787]">
                     {
-                        ingredients.map((i,idx)=><li key={idx}>{i}</li>)
+                       
+                        ingredientSlice.map((i,idx)=><li key={idx}>{i}</li>)
                     }
                 </ul>
                 <hr />
