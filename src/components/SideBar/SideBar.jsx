@@ -1,5 +1,6 @@
 import Tr from "../Tr/Tr";
 import PTr from "../PTr/PTr";
+import { ToastContainer, toast } from 'react-toastify';
 // import { totalTime } from "../Recipes/Recipes";
 
 
@@ -9,8 +10,11 @@ const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
     const totalCalories=addPreparing.reduce((p,c)=>p+parseInt(c.calories),0)
     console.log(totalTime);
     return (
+      
         <div className="border-2 ml-6 rounded-xl">
+            
             <div>
+          
                 <h1 className="text-2xl mt-6 mb-4 font-semibold text-center">Want to cook: {addRecipes.length}</h1>
                 <div className="px-10 mb-6"><hr /></div>
                 <div className="overflow-x-auto">
@@ -71,9 +75,9 @@ const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
                     </tbody>
                 </table>
                 </div>
-                <div className="flex justify-end gap-3 text-lg font-semibold my-4 mr-4 text-[#282828CC]">
-                    <p>Total Time =<br /> <span>{totalTime} minutes</span></p>
-                    <p>Total Calories =<br /> <span> {totalCalories} calories</span></p>
+                <div className="flex justify-center gap-12 text-lg font-semibold my-4 mr-4 text-[#282828CC]">
+                    <p>Total Time = {totalTime}<br /> <span> minutes</span></p>
+                    <p>Total Calories = {totalCalories}<br /> <span> calories</span></p>
                 </div>
             </div>
         </div>
