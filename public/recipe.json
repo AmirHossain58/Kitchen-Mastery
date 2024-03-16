@@ -1,0 +1,57 @@
+ [
+      {
+        "recipe_id": 1,
+        "recipe_name": "Spaghetti Carbonara",
+        "short_description": "Classic Italian pasta dish made with eggs, cheese, bacon, and black pepper.",
+        "ingredients": ["400g spaghetti", "150g pancetta or bacon", "3 large eggs", "1 cup grated Parmesan cheese", "2 cloves garlic, ced", "Salt and black pepper to taste", "Chopped parsley for garnish"],
+        "preparing_time": "25",
+        "calories": "480",
+        "recipe_image": "https://i.ibb.co/mGbnFMR/spaghetti-with-vegetablesbroccolitomatoespeppers-black-slate-background.jpg"
+      },
+      {
+        "recipe_id": 2,
+        "recipe_name": "Chicken Tikka Masala",
+        "short_description": "Creamy and flavorful Indian curry dish with marinated chicken cooked in a spiced tomato sauce.",
+        "ingredients": ["500g boneless, skinless chicken thighs", "1 cup plain yogurt", "3 tbsp tikka masala spice blend", "2 tbsp vegetable oil", "1 onion, chopped", "3 cloves garlic, ced", "1-inch ginger, grated", "1 can (400g) crushed tomatoes", "1 cup heavy cream", "Salt and pepper to taste", "Fresh cilantro for garnish"],
+        "preparing_time": "40",
+        "calories": "550",
+        "recipe_image": "https://i.ibb.co/dkrn1VW/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table.jpg"
+      },
+      {
+        "recipe_id": 3,
+        "recipe_name": "Caprese Salad",
+        "short_description": "Simple and refreshing Italian salad made with tomatoes, fresh mozzarella cheese, basil, olive oil, and balsamic glaze.",
+        "ingredients": ["2 large tomatoes, sliced", "200g fresh mozzarella cheese, sliced", "Handful of fresh basil leaves", "2 tbsp extra virgin olive oil", "1 tbsp balsamic glaze", "Salt and black pepper to taste"],
+        "preparing_time": "10",
+        "calories": "250",
+        "recipe_image": "https://i.ibb.co/VTPqVyC/side-view-fresh-salad-with-feta-cheese-tomatoes-cucumbers-dried-herbs-with-olive-oil-white-bowl.jpg"
+      },
+      {
+        "recipe_id": 4,
+        "recipe_name": "Beef Stir-Fry",
+        "short_description": "Quick and flavorful stir-fry with tender beef and mixed vegetables, served with rice.",
+        "ingredients": ["400g beef sirloin, thinly sliced", "2 cups mixed vegetables (bell peppers, broccoli, carrots, etc.)", "3 tbsp soy sauce", "2 tbsp oyster sauce", "2 cloves garlic, ced", "1 tbsp ginger, grated", "2 tbsp vegetable oil", "Cooked rice for serving"],
+        "preparing_time": "30",
+        "calories": "380",
+        "recipe_image": "https://i.ibb.co/WyVh0sQ/beef-pan-baebacue-bbq-with-grilled-potatoes-bell-peppers.jpg"
+      },
+      {
+        "recipe_id": 5,
+        "recipe_name": "Vegetable Curry",
+        "short_description": "Hearty and aromatic vegetarian curry packed with assorted vegetables and spices, served with rice or naan.",
+        "ingredients": ["2 cups mixed vegetables (potatoes, carrots, peas, etc.)", "1 onion, chopped", "2 cloves garlic, ced", "1-inch ginger, grated", "1 can (400ml) coconut milk", "2 tbsp curry powder", "1 tsp turmeric powder", "1 tsp cu seeds", "2 tbsp vegetable oil", "Salt and pepper to taste", "Fresh cilantro for garnish"],
+        "preparing_time": "35",
+        "calories": "320",
+        "recipe_image": "https://i.ibb.co/ggxrJx0/grilled-meat-veggies-wooden-plate-generated-by-ai.jpg"
+      },
+      {
+        "recipe_id": 6,
+        "recipe_name": "Chocolate Brownies",
+        "short_description": "Rich and fudgy chocolate brownies, perfect for satisfying your sweet tooth cravings.",
+        "ingredients": ["1 cup unsalted butter", "2 cups granulated sugar", "4 large eggs", "1 tsp vanilla extract", "3/4 cup cocoa powder", "1 cup all-purpose flour", "1/2 tsp salt", "1/2 cup chocolate chips"],
+        "preparing_time": "45",
+        "calories": "200",
+        "recipe_image": "https://i.ibb.co/PDwDJR7/close-up-delicious-brownies-with-sugar.jpg"
+      }
+    ]
+  
