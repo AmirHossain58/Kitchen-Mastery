@@ -4,7 +4,7 @@ import { AiOutlineFire } from "react-icons/ai";
 const   Recipe = ({recipe,handleCook,handlePreparing}) => {
     const{ calories,recipe_image,recipe_name, short_description,preparing_time,ingredients }=recipe
     // console.log(recipe);
-    const ingredientSlice=ingredients.slice(0,5)
+    const ingredientSlice=ingredients.slice(0,3)
 
     return (
         <div>
