@@ -8,7 +8,7 @@ const Tr = ({recip,idx,handlePreparing}) => {
                         <td>{recip.recipe_name}</td>
                         <td>{recip.preparing_time}</td>
                         <td>{recip.calories}</td>
-                        <td><button onClick={()=>handlePreparing(recip)} className="btn bg-[#0BE58A] text-lg font-semibold rounded-full border-0" >Preparing</button></td>
+                        <td><button onClick={()=>handlePreparing(recip)} className="btn bg-[#0BE58A] lg:text-lg font-semibold rounded-full border-0" >Preparing</button></td>
                     </tr>
         </>
     );

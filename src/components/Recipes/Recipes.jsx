@@ -24,7 +24,7 @@ const Recipes = () => {
     if(!isExists){
         setAddRecipes([...addRecipes,recipe])
     }else{
-       return toast("Already Exist!");
+       return toast.warn("Already Exist!");
      
     }
    

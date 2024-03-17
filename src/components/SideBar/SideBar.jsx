@@ -18,7 +18,7 @@ const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
                 <h1 className="text-2xl mt-6 mb-4 font-semibold text-center">Want to cook: {addRecipes.length}</h1>
                 <div className="px-10 mb-6"><hr /></div>
                 <div className="overflow-x-auto">
-                <table className="table">
+                <table className="table ">
                     {/* head */}
                     <thead>
                     <tr>
