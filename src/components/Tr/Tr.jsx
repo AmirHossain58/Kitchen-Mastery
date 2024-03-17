@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 const Tr = ({recip,idx,handlePreparing}) => {
     return (
         <>
@@ -14,4 +14,9 @@ const Tr = ({recip,idx,handlePreparing}) => {
     );
 };
 
+Tr.propTypes = {
+    recip: PropTypes.object,
+    handlePreparing: PropTypes.func,
+    idx: PropTypes.number,
+  };
 export default Tr;

@@ -1,9 +1,9 @@
 import { CiStopwatch } from "react-icons/ci";
 import { AiOutlineFire } from "react-icons/ai";
+import PropTypes from 'prop-types';
 
-const   Recipe = ({recipe,handleCook,handlePreparing}) => {
+const   Recipe = ({recipe,handleCook}) => {
     const{ calories,recipe_image,recipe_name, short_description,preparing_time,ingredients }=recipe
-    // console.log(recipe);
     const ingredientSlice=ingredients.slice(0,3)
 
     return (
@@ -35,4 +35,9 @@ const   Recipe = ({recipe,handleCook,handlePreparing}) => {
     );
 };
 
+Recipe.propTypes = {
+    recipe: PropTypes.object,
+    handleCook: PropTypes.func,
+
+  }
 export default Recipe;

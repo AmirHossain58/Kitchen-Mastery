@@ -13,13 +13,6 @@ const Banner = () => {
     </div>
   </div>
 </div>
-        // <div className="flex flex-col justify-center items-center">
-        //     <h1 className="text-6xl font-bold">Discover an exceptional cooking <br /> class tailored for you!</h1>
-        //     <p>Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
-        //     <div><button className="btn">Explore Now</button>
-        //     <button className="btn">Our Feedback</button></div>
-            
-        // </div>
     );
 };
 

@@ -23,6 +23,8 @@ const Header = () => {
         <li><a>About</a></li>
         <li><a>Search</a></li>
     </ul>
+
+    
   </div>
   <div className="navbar-end">
     <div className="mr-4 hidden lg:inline">

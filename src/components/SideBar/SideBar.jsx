@@ -1,14 +1,9 @@
 import Tr from "../Tr/Tr";
 import PTr from "../PTr/PTr";
-import { ToastContainer, toast } from 'react-toastify';
-// import { totalTime } from "../Recipes/Recipes";
-
-
+import PropTypes from 'prop-types';
 const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
-    console.log(addPreparing);
     const totalTime=addPreparing.reduce((p,c)=>p+parseInt(c.preparing_time),0)
     const totalCalories=addPreparing.reduce((p,c)=>p+parseInt(c.calories),0)
-    console.log(totalTime);
     return (
       
         <div className="border-2 ml-6 rounded-xl">
@@ -63,15 +58,6 @@ const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
                         {
                            addPreparing.map((i,idx)=><PTr key={idx} i={i} idx={idx}></PTr>) 
                         }
-                    {/* row 1 */}
-                    {/* <tr className="bg-[#28282808]"> */}
-                        {/* <th>1</th>
-                        <td>Cy Ganderton</td>
-                        <td>Quality Control Specialist</td>
-                        <td>Blue</td> */}
-                    
-                        {/* <td><button onClick={()=>handleCook()} className="btn bg-[#0BE58A] text-lg font-semibold rounded-full border-0" >Preparing</button></td> */}
-                    {/* </tr> */}
                     </tbody>
                 </table>
                 </div>
@@ -83,5 +69,9 @@ const SideBar = ({addRecipes,handlePreparing,addPreparing}) => {
         </div>
     );
 };
-
+SideBar.propTypes = {
+    addRecipes: PropTypes.array,
+    handlePreparing: PropTypes.func,
+    addPreparing: PropTypes.array
+  };
 export default SideBar;

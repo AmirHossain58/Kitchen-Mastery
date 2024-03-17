@@ -17,7 +17,6 @@ const Recipes = () => {
        
     },[]);
   const handleCook=(recipe)=>{
-    console.log(recipe);
     const isExists=addRecipes.find(item=>item.recipe_id
         ===recipe.recipe_id
         )
@@ -44,7 +43,7 @@ const Recipes = () => {
                 <div className="col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {
                         recipes.map(recipe=><Recipe 
-                            key={recipe.id} 
+                            key={recipe.recipe_id} 
                             recipe={recipe}
                             handleCook={handleCook}
                             

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 const PTr = ({i,idx}) => {
     return (
         <>
@@ -12,5 +12,8 @@ const PTr = ({i,idx}) => {
         </>
     );
 };
-
+PTr.propTypes = {
+    i: PropTypes.object,
+    idx:PropTypes.number
+  };
 export default PTr;
